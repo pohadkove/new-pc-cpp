@@ -28,6 +28,16 @@ string discord = "https://discord.com/api/downloads/distributions/app/installers
     //curseforge
 string curseforge = "https://download.overwolf.com/install/Download?&PartnerId=4047";
     ShellExecuteA(NULL, "open", curseforge.c_str(), NULL, NULL, SW_SHOWNORMAL);
+    //battlenet
+string battlenet = "https://www.blizzard.com/download/confirmation?product=bnetdesk";
+    ShellExecuteA(NULL, "open", battlenet.c_str(), NULL, NULL, SW_SHOWNORMAL);
+    //ea
+string ea = "https://media.contentapi.ea.com/content/dam/eacom/ea-app/images/2022/05/ea-app-hero-medium-xl-7x2.png.adapt.crop7x2.1920w.png";
+    ShellExecuteA(NULL, "open", ea.c_str(), NULL, NULL, SW_SHOWNORMAL);
+    //java
+string java = "https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.exe";
+    ShellExecuteA(NULL, "open", java.c_str(), NULL, NULL, SW_SHOWNORMAL);
+
     //success
      system("Color 0A");
      cout << "success!";
