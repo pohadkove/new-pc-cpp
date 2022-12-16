@@ -6,8 +6,9 @@
 
 using namespace std;
 
-int main() {
-//steam
+//installation function
+void install() {
+    //steam
  string steam = "https://cdn.cloudflare.steamstatic.com/client/installer/SteamSetup.exe";
     ShellExecuteA(NULL, "open", steam.c_str(), NULL, NULL, SW_SHOWNORMAL);
 //epic
@@ -38,9 +39,34 @@ string ea = "https://media.contentapi.ea.com/content/dam/eacom/ea-app/images/202
 string java = "https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.exe";
     ShellExecuteA(NULL, "open", java.c_str(), NULL, NULL, SW_SHOWNORMAL);
 
-    //success
-     system("Color 0A");
-     cout << "success!";
+}
+
+//main
+int main() {
+
+//consent is key
+    char type;
+    while (true) {
+    cout << "Do you want to install these exe filse? [y/n]" << endl;
+    cin >> type;
+
+    if ((type == 'y')) {
+        cout << "starting";
+        install();
+            //success
+        system("Color 0A");
+        cout << "success!";
+        break;
+    }
+    else {
+        system("Color 4");
+        cout << "sad to see you go";
+        break;
+    }
+}
+
+
+    Sleep(100);
     return 0;
 
 }
