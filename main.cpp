@@ -44,6 +44,7 @@ string java = "https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin
 //main
 int main() {
 
+cout << "This will install a bunch of exe files on your pc but will not run them, go to the github at https://github.com/pohadkove/new-pc-cpp to see the urls if you doub the safety \n";
 //consent is key
     char type;
     while (true) {
