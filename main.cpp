@@ -44,11 +44,61 @@ string java = "https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin
 //main
 int main() {
 
-cout << "This will install a bunch of exe files on your pc but will not run them, go to the github at https://github.com/pohadkove/new-pc-cpp to see the urls if you doub the safety \n";
-//consent is key
-    char type;
+cout << "This will install a bunch of exe files on your pc but will not run them, go to the github at https://github.com/pohadkove/new-pc-cpp to see the urls if you doubt the safety \n some links may just open tabs due to no direct download link \n";
+
+//browser select
+  char type;
     while (true) {
-    cout << "Do you want to install these exe filse? [y/n]" << endl;
+    cout << "Which browser do you want to install? A) Chrome B) Firefox C) OperaGX D) Opera E) Brave \n this is case sensitive" << endl;
+    cin >> type;
+
+    if ((type == 'A')) {
+        cout << "Starting...";
+        string chrome = "https://www.google.com/chrome/thank-you.html?statcb=1&installdataindex=empty&defaultbrowser=0#";
+            ShellExecuteA(NULL, "open", chrome.c_str(), NULL, NULL, SW_SHOWNORMAL);
+        cout << "Done";
+        break;
+    }
+    if ((type == 'B')) {
+        cout << "Starting...";
+        string firefox = "https://www.mozilla.org/en-US/firefox/download/thanks/";
+            ShellExecuteA(NULL, "open", firefox.c_str(), NULL, NULL, SW_SHOWNORMAL);
+        cout << "Done";
+        break;
+    }
+     if ((type == 'C')) {
+        cout << "Starting...";
+        string OperaGX = "https://www.opera.com/computer/thanks?ni=eapgx&os=windows";
+            ShellExecuteA(NULL, "open", OperaGX.c_str(), NULL, NULL, SW_SHOWNORMAL);
+        cout << "Done";
+        break;
+    }
+      if ((type == 'D')) {
+        cout << "Starting...";
+        string Opera = "https://www.opera.com/computer/thanks?ni=stable&os=windows";
+            ShellExecuteA(NULL, "open", Opera.c_str(), NULL, NULL, SW_SHOWNORMAL);
+        cout << "Done";
+        break;
+    }
+          if ((type == 'E')) {
+        cout << "Starting...";
+        string brave = "https://laptop-updates.brave.com/latest/winx64";
+            ShellExecuteA(NULL, "open", brave.c_str(), NULL, NULL, SW_SHOWNORMAL);
+        cout << "Done";
+        break;
+    }
+    else {
+        system("Color 4");
+        cout << "no browser selected proceeding with next question";
+        system("Color 7");
+        break;
+    }
+}
+
+//consent is key
+
+    while (true) {
+    cout << " \n Do you want to install the rest of the files? [y/n]" << endl;
     cin >> type;
 
     if ((type == 'y')) {
