@@ -126,7 +126,7 @@ cout << "This will install a bunch of exe files on your pc but will not run them
 }
 
     while (true) {
-    cout << " \n Do you want to install the game launcher pack [y/n]" << endl;
+    cout << " \n Do you want to install the minecraft launcher pack [y/n]" << endl;
     cin >> type;
 
     if ((type == 'y')) {
